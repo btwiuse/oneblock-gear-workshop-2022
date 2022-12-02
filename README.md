@@ -4,6 +4,11 @@ class:
 - lead
 marp: true
 style: |
+  h1 {
+    border-left: 15px solid #6666FF;
+    padding-left: 1rem;
+    color: #6666FF;
+  }
   .columns {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -15,8 +20,30 @@ style: |
   .columns-right {
     background: beige;
   }
+  .qr {
+    padding-top: 10%;
+  }
+  .gitpod {
+    padding-top: 32%;
+  }
+  img{background-color:transparent}
 size: 16:9
 ---
+
+![bg](./Cover.png)
+
+<img width="400" height="80" src="./Header.png" alt="header" />
+
+<br/>
+<br/>
+
+<img width="600" height="400" src="./CoverText.png" alt="cover text" />
+
+<br/>
+
+---
+
+![bg](./Background.png)
 
 # Gear 合约入门介绍
 
@@ -27,11 +54,11 @@ size: 16:9
 <details open><summary>智能合约特性和开发范例</summary>
 
 <div class="columns">
-<p align="center">
-  <img width="210" height="210" src="https://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=https%3A%2F%2Fgithub.com%2Fbtwiuse%2Foneblock-gear-workshop-2022&amp;qzone=1&amp;margin=0&amp;size=400x400&amp;ecc=L" alt="qr code" />
+<p align="center" class="qr">
+  <img width="185" height="185" src="https://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=https%3A%2F%2Fgithub.com%2Fbtwiuse%2Foneblock-gear-workshop-2022&amp;qzone=1&amp;margin=0&amp;size=400x400&amp;ecc=L" alt="qr code" />
 </p>
 
-<p align="center">
+<p align="center" class="gitpod">
   <a href="https://gitpod.io/#https://github.com/btwiuse/oneblock-gear-workshop-2022" target="_blank">
     <img src="https://gitpod.io/button/open-in-gitpod.svg" width="210" alt="Gitpod">
   </a>
@@ -48,19 +75,21 @@ size: 16:9
 </div>
 <div>
 
-- #### [什么是 Gear](#什么是-gear)
-  - [Rust 与 WebAssembly](#rust-与-webassembly)
-  - [Hello World](#hello-world)
-- #### [Actor 模型](#actor-模型)
-  - [Processing](#)
-  - [Communication](#)
-  - [State](#)
-- #### [开发范例](#开发范例)
+- #### 什么是 Gear
+  - **Rust 与 WebAssembly**
+  - **Hello World**
+- #### Actor 模型
+  - **Processing**
+  - **Communication**
+  - **State**
+- #### 开发范例
 
 </div>
 </div>
 
 ---
+
+![bg](./Ambient.png)
 
 # 什么是 Gear
 
@@ -111,6 +140,8 @@ Stay tuned!
 
 ---
 
+![bg](./Ambient.png)
+
 # Rust 与 WebAssembly
 
 ## WebAssembly: 高效、可移植的二进制指令格式 (W3C标准)
@@ -128,6 +159,8 @@ Stay tuned!
 
 ---
 
+![bg](./Ambient.png)
+
 # Hello World
 
 ## `cargo new`
@@ -143,6 +176,8 @@ $ cargo add --git ...
 ```
 
 ---
+
+![bg](./Ambient.png)
 
 ## `./rust-toolchain`
 
@@ -167,6 +202,8 @@ extern "C" fn handle() {
 
 ---
 
+![bg](./Ambient.png)
+
 ## `./build.rs`
 
 ```
@@ -185,6 +222,8 @@ fn main() {
   - @gear-js/api
 
 ---
+
+![bg](./Ambient.png)
 
 # 开发者常用工具/库/参考范例
 
@@ -220,6 +259,8 @@ fn main() {
 
 ---
 
+![bg](./Ambient.png)
+
 # Actor 模型
 
 ## 账户体系
@@ -235,25 +276,46 @@ fn main() {
 
 ---
 
+![bg](./Ambient.png)
+
 # Processing
 
 ---
+
+![bg](./Ambient.png)
 
 # Communication
 
 ---
 
+![bg](./Ambient.png)
+
 # State
 
 ---
 
+![bg](./Ambient.png)
+
 # 开发范例
+
+<div class="columns">
+
+<div>
 
 ##### Decentralized Finance (DeFi)
 ##### Decentralized Autonomous Orgs (DAOs)
 ##### Non-fungible Tokens (NFTs)
 ##### Staking
+
+</div>
+
+<div>
+
 ##### Wallets
 ##### Tools&Explorers
 ##### Web3/eCommerce
 ##### Oracles
+
+</div>
+
+</div>
