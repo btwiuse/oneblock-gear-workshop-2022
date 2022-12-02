@@ -1,0 +1,15 @@
+{
+  "name": "oneblock-gear-workshop-2022",
+  "version": "0.0.0",
+  "description": "slides",
+  "repository": "https://btwiuse/oneblock-gear-workshop-2022",
+  "author": "btwiuse",
+  "license": "MIT",
+  "scripts": {
+    "start": "marp -s --html --allow-local-files .",
+    "build": "marp --html --allow-local-files README.md -o public/index.html && cp *.png public"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^2.2.2"
+  }
+}
