@@ -10,6 +10,7 @@ tasks:
     init: |
       gp open hello-gear/src/lib.rs
       clear && printf '\e[3J' && history -c
+      yarn
       cd hello-gear && cargo build --release
 vscode:
   extensions:
