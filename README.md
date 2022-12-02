@@ -1,5 +1,5 @@
 ---
-header: "![Header](Gear.png)"
+header: "![Header](./assets/Gear.png)"
 paginate: true
 theme: default
 class:
@@ -15,7 +15,7 @@ style: |
   h1 {
     border-left: 15px solid #6666FF;
     padding-left: 1rem;
-    color: #6666FF;
+    color: #131819;
   }
   .columns {
     display: grid;
@@ -38,20 +38,20 @@ style: |
 size: 16:9
 ---
 
-![bg](./Cover.png)
+![bg](./assets/Cover.png)
 
-<img width="400" height="80" src="./Header.png" alt="header" />
+<img width="400" height="80" src="./assets/Header.png" alt="header" />
 
 <br/>
 <br/>
 
-<img width="600" height="400" src="./CoverText.png" alt="cover text" />
+<img width="600" height="400" src="./assets/CoverText.png" alt="cover text" />
 
 <br/>
 
 ---
 
-![bg](./Background.png)
+![bg](./assets/Background.png)
 
 # Gear 合约入门介绍
 
@@ -97,7 +97,7 @@ size: 16:9
 
 ---
 
-![bg](./Ambient.png)
+![bg](./assets/Ambient.png)
 
 # 什么是 Gear
 
@@ -148,7 +148,7 @@ Stay tuned!
 
 ---
 
-![bg](./Ambient.png)
+![bg](./assets/Ambient.png)
 
 # Rust 与 WebAssembly
 
@@ -166,7 +166,7 @@ Stay tuned!
 
 ---
 
-![bg](./Ambient.png)
+![bg](./assets/Ambient.png)
 
 # Hello World
 
@@ -184,7 +184,7 @@ $ cargo add --git ...
 
 ---
 
-![bg](./Ambient.png)
+![bg](./assets/Ambient.png)
 
 ## `./rust-toolchain`
 
@@ -209,7 +209,7 @@ extern "C" fn handle() {
 
 ---
 
-![bg](./Ambient.png)
+![bg](./assets/Ambient.png)
 
 ## `./build.rs`
 
@@ -230,7 +230,7 @@ fn main() {
 
 ---
 
-![bg](./Ambient.png)
+![bg](./assets/Ambient.png)
 
 # 开发者常用工具/库/参考范例
 
@@ -268,11 +268,11 @@ fn main() {
 
 # Actor 模型
 
-![bg](./Cover.png)
+![bg](./assets/Cover.png)
 
 ---
 
-![bg](./Ambient.png)
+![bg](./assets/Ambient.png)
 
 ## 账户体系
 
@@ -289,25 +289,25 @@ fn main() {
 
 ---
 
-![bg](./Ambient.png)
+![bg](./assets/Ambient.png)
 
 # Processing
 
 ---
 
-![bg](./Ambient.png)
+![bg](./assets/Ambient.png)
 
 # Communication
 
 ---
 
-![bg](./Ambient.png)
+![bg](./assets/Ambient.png)
 
 # State
 
 ---
 
-![bg](./Ambient.png)
+![bg](./assets/Ambient.png)
 
 # 开发范例
 

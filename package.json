@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "marp -s --html --allow-local-files .",
-    "build": "cp *.png public"
+    "build": "true"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^2.2.2"
