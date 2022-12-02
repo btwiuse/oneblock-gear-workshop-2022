@@ -63,7 +63,7 @@ size: 16:9
 
 <div class="columns">
 <p align="center" class="qr">
-  <img width="185" height="185" src="https://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=https%3A%2F%2Fgithub.com%2Fbtwiuse%2Foneblock-gear-workshop-2022&amp;qzone=1&amp;margin=0&amp;size=400x400&amp;ecc=L" alt="qr code" />
+  <img width="185" height="185" src="https://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=https://oneblock-gear-workshop-2022.vercel.app/&amp;qzone=1&amp;margin=0&amp;size=400x400&amp;ecc=L" alt="qr code" />
 </p>
 
 <p align="center" class="gitpod">
@@ -159,8 +159,7 @@ Stay tuned!
 ## Rust: 多范式通用编程语言 (Safety, Speed, Concurrency)
 
 - 完善的工具链
-  - `wasm32-unknown-unknown`
-    [Tier 2](https://doc.rust-lang.org/rustc/platform-support.html#tier-2)
+  - `wasm32-unknown-unknown` [Tier 2](https://doc.rust-lang.org/rustc/platform-support.html#tier-2)
   - [no_std](https://docs.rust-embedded.org/book/intro/no-std.html) -> [gstd](https://docs.gear.rs/gstd/)
 - `cargo` 包管理器 & [crates.io/categories/no-std](https://crates.io/categories/no-std)
 - 丰富的插件: `rustfmt`, `cargo-clippy`, `rust-analyzer`, ...
