@@ -28,12 +28,12 @@ size: 16:9
 
 <div class="columns">
 <p align="center">
-  <img width="240" height="240" src="https://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=https%3A%2F%2Fgithub.com%2Fbtwiuse%2Foneblock-gear-workshop-2022&amp;qzone=1&amp;margin=0&amp;size=400x400&amp;ecc=L" alt="qr code" />
+  <img width="210" height="210" src="https://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=https%3A%2F%2Fgithub.com%2Fbtwiuse%2Foneblock-gear-workshop-2022&amp;qzone=1&amp;margin=0&amp;size=400x400&amp;ecc=L" alt="qr code" />
 </p>
 
 <p align="center">
   <a href="https://gitpod.io/#https://github.com/btwiuse/oneblock-gear-workshop-2022" target="_blank">
-    <img src="https://gitpod.io/button/open-in-gitpod.svg" width="240" alt="Gitpod">
+    <img src="https://gitpod.io/button/open-in-gitpod.svg" width="210" alt="Gitpod">
   </a>
 </p>
 <div/>
@@ -94,8 +94,7 @@ size: 16:9
 ...
 ```
 
-Coming soon!
-[source](https://github.com/paritytech/ss58-registry/blob/13019a7d23901c499d97855ba6c2145962c42fd0/ss58-registry.json#L787-L795)
+Coming soon! ([source](https://github.com/paritytech/ss58-registry/blob/13019a7d23901c499d97855ba6c2145962c42fd0/ss58-registry.json#L787-L795))
 
 </details>
 
@@ -123,10 +122,8 @@ Stay tuned!
 - 完善的工具链
   - `wasm32-unknown-unknown`
     [Tier 2](https://doc.rust-lang.org/rustc/platform-support.html#tier-2)
-  - [no_std](https://docs.rust-embedded.org/book/intro/no-std.html) ->
-    [gstd](https://docs.gear.rs/gstd/)
-- `cargo` 包管理器 &
-  [crates.io/categories/no-std](https://crates.io/categories/no-std)
+  - [no_std](https://docs.rust-embedded.org/book/intro/no-std.html) -> [gstd](https://docs.gear.rs/gstd/)
+- `cargo` 包管理器 & [crates.io/categories/no-std](https://crates.io/categories/no-std)
 - 丰富的插件: `rustfmt`, `cargo-clippy`, `rust-analyzer`, ...
 
 ---
@@ -189,6 +186,40 @@ fn main() {
 
 ---
 
+# 开发者常用工具/库/参考范例
+
+<div class="columns">
+<div>
+
+## 合约 (Program) 相关
+- [gcore](https://docs.gear.rs/gcore/) 基础类型定义
+- [gstd](https://docs.gear.rs/gstd/) 标准库
+- [gtest](https://docs.gear.rs/gtest/) 编写测试
+
+## 交互
+- [gclient](https://docs.gear.rs/gclient/) Rust 客户端
+- [@gear-js/api](#) JavaScript/TypeScript 客户端
+- [create-gear-app](#) 前端模板生成工具
+
+</div>
+<div>
+
+## 工具
+- [@gear-js/gear-meta](#) 基于 `.meta.wasm` 编解码消息 CLI
+- [Gear Idea](#) 合约部署 GUI
+
+## 参考范例
+
+- [gear-dapps/](https://github.com/gear-dapps/)
+  - [app](https://github.com/gear-dapps/app) 合约模板 
+  - [fungible-token](#), [non-fungible-token](#), [dao](#), [oracle](#), [RMRK](#) ...
+
+</div>
+
+</div>
+
+---
+
 # Actor 模型
 
 ## 账户体系
@@ -204,17 +235,25 @@ fn main() {
 
 ---
 
+# Processing
+
+---
+
+# Communication
+
+---
+
+# State
+
+---
+
 # 开发范例
 
-- [gstd 标准库](#)
-- [@gear-js/api](#)
-
-## Ping Pong
-
-## gFT (ERC-20)
-
-## gNFT (ERC-721)
-
-## gMT (ERC-1155)
-
-## DAO
+##### Decentralized Finance (DeFi)
+##### Decentralized Autonomous Orgs (DAOs)
+##### Non-fungible Tokens (NFTs)
+##### Staking
+##### Wallets
+##### Tools&Explorers
+##### Web3/eCommerce
+##### Oracles
