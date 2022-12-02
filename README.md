@@ -170,13 +170,13 @@ Stay tuned!
 
 # Hello World
 
-## `cargo new`
+## `cargo new ...`
 
 ```
 $ cargo new hello-gear && cd hello-gear
 ```
 
-## `cargo add`
+## `cargo add ...`
 
 ```
 $ cargo add --git ...
