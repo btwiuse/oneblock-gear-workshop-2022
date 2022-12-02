@@ -13,5 +13,5 @@ tasks:
       clear && printf '\e[3J' && history -c
 vscode:
   extensions:
-    - matklad.rust-analyzer
+    - rust-lang.rust-analyzer
     - marp-team.marp-vscode
