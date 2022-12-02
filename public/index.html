@@ -820,10 +820,12 @@ img{background-color:transparent}
 
 <h1>Hello World</h1>
 <h2><code>cargo new ...</code></h2>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>$ cargo new hello-gear &amp;&amp; cd hello-gear
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>$ cargo new --lib hello-gear &amp;&amp; cd hello-gear
 </code></pre>
 <h2><code>cargo add ...</code></h2>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>$ cargo add --git ...
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>$ cargo add --git https://github.com/gear-tech/gear.git --build gear-wasm-builder
+$ cargo add --git https://github.com/gear-tech/gear.git --dev gtest
+$ cargo add --git https://github.com/gear-tech/gear.git gstd
 </code></pre>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-header="![Header](./assets/Gear.png)" data-paginate="true" data-class="lead" data-theme="default" data-style="header {
@@ -1145,13 +1147,13 @@ img{background-color:transparent}
 </code></pre>
 <h2><code>cargo build --release</code></h2>
 <ul>
-<li><code>./target/wasm32-unknown-unknown/release/*.opt.wasm</code>
+<li><code>./target/wasm32-unknown-unknown/release/hello_gear.opt.wasm</code>
 <ul>
 <li>合约代码 (Code)</li>
 <li>提交上链 -&gt; CodeId -&gt; 部署 (+salt) -&gt; ProgramId</li>
 </ul>
 </li>
-<li><code>./target/wasm32-unknown-unknown/release/*.meta.wasm</code>
+<li><code>./target/wasm32-unknown-unknown/release/hello_gear.meta.wasm</code>
 <ul>
 <li>合约 Metadata</li>
 <li>@gear-js/api</li>
