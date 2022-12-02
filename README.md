@@ -270,9 +270,17 @@ fn main() {
 
 ---
 
+![bg](./assets/Cover.png)
+
 # Actor 模型
 
-![bg](./assets/Cover.png)
+> 一切皆是 Actor
+
+<!-- 类似面向对象编程里面的 "一切皆对象" -->
+
+<!-- 关于 Actor 具体怎么翻译，不重要，因为这个概念本身是由其行为定义的，只要弄清楚 Actor 本身的行为，也就明白了这个概念 -->
+
+<!-- 在弄清楚什么是 Actor 之前，先来看看 "一切皆是 Actor" 在 Gear 当中的体现 -->
 
 ---
 
@@ -290,6 +298,22 @@ fn main() {
   `0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d`
   - `5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY` //Alice
   - [ss58.org](https://ss58.org)
+
+---
+
+![bg](./assets/Ambient.png)
+
+# Actor 遵循的规则
+
+在 Actor 处理收到的消息时，它可以:
+
+- 向另一个 Actor 发送消息
+- 创建新的 Actor
+- 改变其内部状态
+
+> :warning: Gear Protocol 在传统的 Actor 模型上额外保证了合约(Program)之间消息的顺序
+
+<!-- 下面就逐个说明在 Gear 合约中的 [消息格式]，[消息处理]，[内部状态] 在代码层面分别如何体现 -->
 
 ---
 
