@@ -161,8 +161,8 @@ Stay tuned!
 - 完善的工具链
   - `wasm32-unknown-unknown` [Tier 2](https://doc.rust-lang.org/rustc/platform-support.html#tier-2)
   - [no_std](https://docs.rust-embedded.org/book/intro/no-std.html) -> [gstd](https://docs.gear.rs/gstd/)
-- `cargo` 包管理器 & [crates.io/categories/no-std](https://crates.io/categories/no-std)
-- 丰富的插件: `rustfmt`, `cargo-clippy`, `rust-analyzer`, ...
+- `cargo` 包管理器 + 丰富的第三方库 [crates.io/categories/no-std](https://crates.io/categories/no-std)
+- 各类插件: `rustfmt`, `cargo-clippy`, `rust-analyzer`, ...
 
 ---
 
