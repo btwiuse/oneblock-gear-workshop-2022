@@ -175,13 +175,15 @@ Stay tuned!
 ## `cargo new ...`
 
 ```
-$ cargo new hello-gear && cd hello-gear
+$ cargo new --lib hello-gear && cd hello-gear
 ```
 
 ## `cargo add ...`
 
 ```
-$ cargo add --git ...
+$ cargo add --git https://github.com/gear-tech/gear.git --build gear-wasm-builder
+$ cargo add --git https://github.com/gear-tech/gear.git --dev gtest
+$ cargo add --git https://github.com/gear-tech/gear.git gstd
 ```
 
 ---
@@ -223,10 +225,10 @@ fn main() {
 
 ## `cargo build --release`
 
-- `./target/wasm32-unknown-unknown/release/*.opt.wasm`
+- `./target/wasm32-unknown-unknown/release/hello_gear.opt.wasm`
   - 合约代码 (Code)
   - 提交上链 -> CodeId -> 部署 (+salt) -> ProgramId
-- `./target/wasm32-unknown-unknown/release/*.meta.wasm`
+- `./target/wasm32-unknown-unknown/release/hello_gear.meta.wasm`
   - 合约 Metadata
   - @gear-js/api
 
