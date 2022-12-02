@@ -1,9 +1,17 @@
 ---
+header: "![Header](Gear.png)"
+paginate: true
 theme: default
 class:
 - lead
 marp: true
 style: |
+  header {
+    position: absolute;
+    float: left;
+    left: 950px;
+    top: -80px;
+  }
   h1 {
     border-left: 15px solid #6666FF;
     padding-left: 1rem;
@@ -259,17 +267,23 @@ fn main() {
 
 ---
 
-![bg](./Ambient.png)
-
 # Actor 模型
+
+![bg](./Cover.png)
+
+---
+
+![bg](./Ambient.png)
 
 ## 账户体系
 
-`gstd::ActorId`: 32-bit Unique Identifier
+[`gstd::ActorId`](https://docs.gear.rs/gstd/struct.ActorId.html) 256-bit Unique Identifier
 
-- 合约(Program)地址 (aka ProgramId), 例如
+> Gear allows users and programs to interact with other users and programs via messages. Source and target program as well as user are represented by 256-bit identifier ActorId struct.
+
+- 📝 合约(Program)地址 (aka ProgramId), 例如
   `0x512905fcf25de5e576c5c9302b75efd68372e9d835945089f046f6170a0ef91a`
-- 用户地址 (即 SS58 公钥), 例如:
+- 🐱 用户地址 (即 SS58 公钥), 例如:
   `0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d`
   - `5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY` //Alice
   - [ss58.org](https://ss58.org)
