@@ -161,7 +161,7 @@ Stay tuned!
 ## Rust: 多范式通用编程语言 (Safety, Speed, Concurrency)
 
 - 完善的工具链
-  - `wasm32-unknown-unknown` [Tier 2](https://doc.rust-lang.org/rustc/platform-support.html#tier-2)
+  - `wasm32-unknown-unknown` [Tier 2](https://doc.rust-lang.org/rustc/platform-support.html#tier-2) support
   - [no_std](https://docs.rust-embedded.org/book/intro/no-std.html) -> [gstd](https://docs.gear.rs/gstd/)
 - `cargo` 包管理器 + 丰富的第三方库 [crates.io/categories/no-std](https://crates.io/categories/no-std)
 - 各类插件: `rustfmt`, `cargo-clippy`, `rust-analyzer`, ...
