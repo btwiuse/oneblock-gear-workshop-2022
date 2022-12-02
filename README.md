@@ -63,7 +63,9 @@ size: 16:9
 
 <div class="columns">
 <p align="center" class="qr">
+ <a href="https://oneblock-gear-workshop-2022.vercel.app/" target="_blank">
   <img width="185" height="185" src="https://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=https://oneblock-gear-workshop-2022.vercel.app/&amp;qzone=1&amp;margin=0&amp;size=400x400&amp;ecc=L" alt="qr code" />
+ </a>
 </p>
 
 <p align="center" class="gitpod">
