@@ -6,9 +6,11 @@ tasks:
       source $HOME/.cargo/env
       echo 'export CARGO_HOME="$HOME/.cargo"' >> ~/.bashrc
       source ~/.bashrc
+      ls -la > /tmp/dir
     init: |
       gp open hello-gear/src/lib.rs
       clear && printf '\e[3J' && history -c
+      cd hello-gear && cargo build --release
 vscode:
   extensions:
     - rust-lang.rust-analyzer
