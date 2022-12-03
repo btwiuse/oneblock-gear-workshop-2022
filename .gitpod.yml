@@ -1,6 +1,8 @@
 tasks:
   - before: |
-      rm -rf $HOME/.cargo
+      sudo apt update
+      sudo apt install -y wabt
+      sudo rm -rf $HOME/.cargo
       unset CARGO_HOME
       curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
       source $HOME/.cargo/env
