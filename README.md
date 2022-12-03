@@ -108,11 +108,13 @@ size: 16:9
 <div class="columns">
 <div>
 
-### Actor Model
+> ##### Smart Contract Engine for Polkadot
 
-### Persistent Memory
+- ### Actor Model
 
-### WebAssembly
+- ### Persistent Memory
+
+- ### WebAssembly
 
 </div>
 <div>
@@ -311,7 +313,7 @@ fn main() {
 - 创建新的 Actor
 - 改变其内部状态
 
-> 🛈  Gear Protocol 在传统的 Actor 模型上额外保证了合约(Program)之间消息的顺序
+> **Note**: Gear Protocol 在传统的 Actor 模型上额外保证了合约(Program)间消息的顺序
 
 <!-- 下面会逐个说明在 Gear 合约中的 [消息编码]，[消息处理]，[内部状态] 在代码层面分别如何体现 -->
 
