@@ -438,6 +438,10 @@ extern "C" fn init() {
 }
 ```
 
+---
+
+![bg](./assets/Ambient.png)
+
 常规消息
 ```
 #[no_mangle]
