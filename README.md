@@ -89,9 +89,10 @@ size: 16:9
   - **Rust 与 WebAssembly**
   - **Hello World**
 - #### Actor 模型
-  - **Processing**
-  - **Communication**
-  - **State**
+  - **消息类型**
+  - **内部状态**
+  - **消息处理**
+  - **元数据**
 - #### 开发范例
 
 </div>
@@ -369,19 +370,71 @@ $ wasm2wat target/wasm32-unknown-unknown/release/hello_gear.meta.wasm | grep 'po
 
 > **Note**: Gear Protocol 在传统的 Actor 模型上额外保证了合约(Program)间消息的顺序
 
-<!-- 下面会逐个说明在 Gear 合约中的 [消息编码]，[消息处理]，[内部状态] 在代码层面分别如何体现 -->
+<!-- 下面会逐个说明在 Gear 合约中的 [消息类型]，[内部状态], [消息处理], [元数据] 在代码层面分别如何体现 -->
 
 ---
 
 ![bg](./assets/Ambient.png)
 
-# Processing
+# 消息类型
+
+## scale-encoding
+
+```
+#[derive(Debug, Encode, Decode, TypeInfo)]
+#[codec(crate = gstd::codec)]
+#[scale_info(crate = gstd::scale_info)]
+pub enum InitConfig { ... }
+pub enum FTAction { ... }
+pub enum FTAction { ... }
+pub enum State { ... }
+pub enum StateReply { ... }
+```
+
+---
+
+![bg](./assets/Ambient.png)
+
+# 内部状态
+
+```
+#[derive(Debug, Default)]
+struct FungibleToken {
+    /// Name of the token.
+    name: String,
+    /// Symbol of the token.
+    symbol: String,
+    /// Total supply of the token.
+    total_supply: u128,
+    /// Map to hold balances of token holders.
+    balances: BTreeMap<ActorId, u128>,
+    /// Map to hold allowance information of token holders.
+    allowances: BTreeMap<ActorId, BTreeMap<ActorId, u128>>,
+    /// Token's decimals.
+    pub decimals: u8,
+}
+
+static mut FUNGIBLE_TOKEN: Option<FungibleToken> = None;
+```
+
+---
+
+![bg](./assets/Ambient.png)
+
+# 消息处理
 
 初始化
 ```
 #[no_mangle]
 extern "C" fn init() {
-  ...
+    let config: InitConfig = msg::load().expect("Unable to decode InitConfig");
+    let ft = FungibleToken {
+        name: config.name,
+        symbol: config.symbol,
+        decimals: config.decimals,
+        ..Default::default()
+    };
+    unsafe { FUNGIBLE_TOKEN = Some(ft) };
 }
 ```
 
@@ -393,19 +446,34 @@ extern "C" fn handle() {
 }
 ```
 
+状态查询
+
+```
+#[no_mangle]
+extern "C" fn meta_state() -> *mut [i32; 2] {
+  ...
+}
+```
+
 ---
 
 ![bg](./assets/Ambient.png)
 
-# Communication
+# 元数据
 
-## scale-encoding
-
----
-
-![bg](./assets/Ambient.png)
-
-# State
+```
+gstd::metadata! {
+    title: "FungibleToken",
+    init:
+        input: InitConfig,
+    handle:
+        input: FTAction,
+        output: FTEvent,
+    state:
+        input: State,
+        output: StateReply,
+}
+```
 
 ---
 
