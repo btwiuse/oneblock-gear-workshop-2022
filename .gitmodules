@@ -1,3 +1,6 @@
 [submodule "ping"]
 	path = ping
 	url = https://github.com/gear-dapps/ping
+[submodule "app"]
+	path = app
+	url = https://github.com/gear-dapps/app
