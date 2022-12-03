@@ -236,6 +236,29 @@ fn main() {
 
 ---
 
+# 使用 `wabt` 查看 WASM 模块导入导出的符号
+
+![bg](./assets/Ambient.png)
+
+```
+$ wasm2wat target/wasm32-unknown-unknown/release/hello_gear.opt.wasm | grep 'port '
+  (import "env" "memory" (memory (;0;) 17))
+  (import "env" "alloc" (func (;0;) (type 0)))
+  (import "env" "free" (func (;1;) (type 1)))
+  (import "env" "gr_error" (func (;2;) (type 2)))
+  (import "env" "gr_size" (func (;3;) (type 1)))
+  (import "env" "gr_read" (func (;4;) (type 3)))
+  (export "handle" (func 21))
+  (export "__gear_stack_end" (global 0))
+```
+
+```
+$ wasm2wat target/wasm32-unknown-unknown/release/hello_gear.meta.wasm | grep 'port '
+  (import "env" "memory" (memory (;0;) 17))
+```
+
+---
+
 ![bg](./assets/Ambient.png)
 
 # 开发者常用工具/库/参考范例
