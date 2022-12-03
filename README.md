@@ -210,6 +210,7 @@ profile = "minimal"
 #[no_mangle]
 extern "C" fn handle() {
   let _ = gstd::msg::load_bytes(); // read input message and do nothing 
+  gstd::msg::reply_bytes(gstd::String::from("Hello world!"), 0);
 }
 ```
 
@@ -233,6 +234,35 @@ fn main() {
 - `./target/wasm32-unknown-unknown/release/hello_gear.meta.wasm`
   - 合约 Metadata
   - @gear-js/api
+
+---
+
+![bg](./assets/Ambient.png)
+
+# 解码消息 Payload
+
+`0x` => ⚙️  => `0x48656c6c6f20776f726c6421`
+
+使用 `@gear-js/gear-meta`
+
+```
+$ gear-meta decode --type String "0x48656c6c6f20776f726c6421" \
+    --meta ./target/wasm32-unknown-unknown/release/hello_gear.meta.wasm
+Hello world!
+```
+
+使用 `@gear-js/api`
+
+```
+import { CreateType } from "@gear-js/api";
+
+let result = CreateType.create(
+  "String",
+  "0x48656c6c6f20776f726c6421",
+  "./target/wasm32-unknown-unknown/release/hello_gear.meta.wasm",
+);
+console.log(JSON.stringify(result.toJSON()));
+```
 
 ---
 
@@ -273,15 +303,16 @@ $ wasm2wat target/wasm32-unknown-unknown/release/hello_gear.meta.wasm | grep 'po
 
 ## 交互
 - [gclient](https://docs.gear.rs/gclient/) Rust 客户端
-- [@gear-js/api](#) JavaScript/TypeScript 客户端
-- [create-gear-app](#) 前端模板生成工具
+- [@gear-js/api](https://www.npmjs.com/package/@gear-js/api) JavaScript/TypeScript 客户端
+- [create-gear-app](https://www.npmjs.com/package/create-gear-app) 前端模板生成工具
 
 </div>
 <div>
 
 ## 工具
-- [@gear-js/gear-meta](#) 基于 `.meta.wasm` 编解码消息 CLI
-- [Gear Idea](#) 合约部署 GUI
+- [@gear-js/gear-meta](https://www.npmjs.com/package/@gear-js/gear-meta) 基于 `.meta.wasm` 编解码消息 CLI
+- [gear-program](https://github.com/gear-tech/gear/tree/master/program) 合约部署 CLI
+- [Gear Idea](https://idea.gear-tech.io/programs?node=wss%3A%2F%2Frpc-node.gear-tech.io) 合约部署 GUI
 
 ## 参考范例
 
@@ -403,3 +434,5 @@ extern "C" fn handle() {
 </div>
 
 </div>
+
+### 👉 https://wiki.gear-tech.io/docs/examples/prerequisites
