@@ -386,7 +386,7 @@ $ wasm2wat target/wasm32-unknown-unknown/release/hello_gear.meta.wasm | grep 'po
 #[scale_info(crate = gstd::scale_info)]
 pub enum InitConfig { ... }
 pub enum FTAction { ... }
-pub enum FTAction { ... }
+pub enum FTEvent { ... }
 pub enum State { ... }
 pub enum StateReply { ... }
 ```
