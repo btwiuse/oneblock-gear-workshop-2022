@@ -51,32 +51,21 @@ size: 16:9
 
 ---
 
-![bg](./assets/Background.png)
+![bg](./assets/BackgroundGearBlack.png)
 
-# Gear 合约入门介绍
+<!-- _color: #FFF -->
+
+# 15 分钟上手 Gear 智能合约
 
 <div class="columns">
 <div>
 
-<h3>
-<details open><summary>智能合约特性和开发范例</summary>
-
-<div class="columns">
-<p align="center" class="qr">
- <a href="https://oneblock-gear-workshop-2022.vercel.app/" target="_blank">
-  <img width="185" height="185" src="https://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=https://oneblock-gear-workshop-2022.vercel.app/&amp;qzone=1&amp;margin=0&amp;size=400x400&amp;ecc=L" alt="qr code" />
- </a>
-</p>
-
-<p align="center" class="gitpod">
-  <a href="https://gitpod.io/#https://github.com/btwiuse/oneblock-gear-workshop-2022" target="_blank">
-    <img src="https://gitpod.io/button/open-in-gitpod.svg" width="210" alt="Gitpod">
-  </a>
-</p>
-<div/>
-
-</details>
-</h3>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 ## Hangbiao
 
@@ -85,21 +74,34 @@ size: 16:9
 </div>
 <div>
 
-- #### 什么是 Gear
-  - **Rust 与 WebAssembly**
-  - **Hello World**
-- #### Actor 模型
+<br/>
+<br/>
+
+- **什么是 Gear**
+- **Gear 智能合约基本特性**
+
+<!--
+  - **Rust / WebAssembly**
+  - **Actor Model** / **Asynchronous Messaging**
+  - **Persistent Memory**
+-->
+
+- **上手示例: Flipper Contract**
+
+<!--
   - **消息类型**
   - **内部状态**
   - **消息处理**
   - **元数据**
-- #### 开发范例
+  - **编写测试**
+-->
 
 </div>
 </div>
 
 ---
 
+<!-- ![bg](./assets/BackgroundGearWhite.png) -->
 ![bg](./assets/Ambient.png)
 
 # 什么是 Gear
@@ -111,11 +113,15 @@ size: 16:9
 
 > ##### Smart Contract Engine for Polkadot
 
+<!--
+
 - ### Actor Model
 
 - ### Persistent Memory
 
 - ### WebAssembly
+
+-->
 
 </div>
 <div>
@@ -150,6 +156,16 @@ Stay tuned!
 </div>
 
 <!-- 近期将上线 Vara Network 主网 -->
+
+---
+
+![bg](./assets/Ambient.png)
+
+# Gear 智能合约基本特性
+
+  - **Rust / WebAssembly**
+  - **Actor Model** / **Asynchronous Messaging**
+  - **Persistent Memory**
 
 ---
 
@@ -483,7 +499,27 @@ gstd::metadata! {
 
 ![bg](./assets/Ambient.png)
 
-# 开发范例
+# Thanks
+
+<h3>
+<details open><summary>获取本 Slide 及配套代码</summary>
+
+<div class="columns">
+<p align="center" class="qr">
+ <a href="https://oneblock-gear-workshop-2022.vercel.app/" target="_blank">
+  <img width="185" height="185" src="https://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=https://oneblock-gear-workshop-2022.vercel.app/&amp;qzone=1&amp;margin=0&amp;size=400x400&amp;ecc=L" alt="qr code" />
+ </a>
+</p>
+
+<p align="center" class="gitpod">
+  <a href="https://gitpod.io/#https://github.com/btwiuse/oneblock-gear-workshop-2022" target="_blank">
+    <img src="https://gitpod.io/button/open-in-gitpod.svg" width="210" alt="Gitpod">
+  </a>
+</p>
+<div/>
+
+</details>
+</h3>
 
 <div class="columns">
 
