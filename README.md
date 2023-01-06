@@ -179,11 +179,11 @@ profile = "minimal"
 
 # Flipper Contract
 
-初始状态: 0
-flip => 1
-flip => 0
-flip => 1
-flip => 0
+初始状态: 🌚
+flip => 🌝
+flip => 🌚
+flip => 🌝
+flip => 🌚
 ...
 
 ---
