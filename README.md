@@ -190,7 +190,7 @@ flip => 0
 
 ![bg](./assets/Ambient.png)
 
-# Flipper Contract: 初始化
+# Flipper Contract: 初始化项目
 
 ## `cargo init ...`
 
