@@ -250,37 +250,6 @@ https://docs.gear.rs/gstd/index.html
 
 ---
 
-# Common Patterns
-
-
-![bg](./assets/Ambient.png)
-
-- Command pattern
-
-<!--
-The Command pattern encapsulates a request as an object, allowing the request to be parameterized, queued, or logged. In Substrate, the dispatchable functions of a pallet serve as commands. The dispatchable functions are defined within the Call enum of a pallet, and each variant represents a specific command that can be executed.
--->
-
-- Dispatcher pattern
-
-<!--
-The Dispatcher pattern is used to decouple various components of a system and provide a centralized mechanism for handling requests. In Substrate, the Executive module acts as the dispatcher, managing the execution of different runtime functions by delegating the calls to the appropriate pallets.
--->
-
-```
-//! my_pallet/src/lib.rs
-
-  // calling transfer_keep_alive() from my pallet
-  let call = pallet_balances::Call::<T>::transfer_keep_alive {
-    dest,
-    amount,
-  };
-  let _ = call.dispatch(origin);
-
-```
-
----
-
 # @gear-js/api
 
 ![bg](./assets/Ambient.png)
