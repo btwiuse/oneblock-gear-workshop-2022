@@ -22,6 +22,11 @@ style: |
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
   }
+  .columns13 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+  }
   .columns-left {
     background: yellow;
   }
@@ -35,6 +40,7 @@ style: |
     padding-top: 32%;
   }
   img{background-color:transparent}
+
 size: 16:9
 ---
 
@@ -42,7 +48,7 @@ size: 16:9
 
 <!-- _color: #FFF -->
 
-# 15 分钟上手 Gear 智能合约
+# Gear 智能合约技术纵览
 
 <div class="columns">
 <div>
@@ -63,16 +69,18 @@ size: 16:9
 <br/>
 <br/>
 
-- **什么是 Gear**
-- **Gear 智能合约基本特性**
+- **Gear Protocol**
+- **Actor Model**
+- **Program Anatomy**
+- **Message Dispatching**
 
 <!--
   - **Rust / WebAssembly**
   - **Actor Model** / **Asynchronous Messaging**
   - **Persistent Memory**
+  - **上手示例: Flipper Contract**
 -->
 
-- **上手示例: Flipper Contract**
 
 <!--
   - **消息类型**
@@ -90,27 +98,15 @@ size: 16:9
 <!-- ![bg](./assets/BackgroundGearWhite.png) -->
 ![bg](./assets/Ambient.png)
 
-# 什么是 Gear
+# Gear Protocol
 
-## 基于 Substrate 的智能合约平台 (PoS, L1)
+## Smart Contract Platform built on Substrate
 
 <div class="columns">
-<div>
 
-> ##### Smart Contract Engine for Polkadot
+<div align="center">
 
-<!--
-
-- ### Actor Model
-
-- ### Persistent Memory
-
-- ### WebAssembly
-
--->
-
-</div>
-<div>
+![](https://i.imgur.com/ixxN8sf.png)
 
 <details><summary>Vara Standalone Network</summary>
 
@@ -132,214 +128,168 @@ Coming soon! ([source](https://github.com/paritytech/ss58-registry/blob/13019a7d
 
 </details>
 
-<details><summary>Kusama & Polkadot Parachain</summary>
-
-Stay tuned!
-
-</details>
 
 </div>
+
+<div>
+
+<div class="columns13">
+<div>
+
+![h:120](https://i.imgur.com/X3XbnIv.png)
+
+![h:120](https://i.imgur.com/sOcLAOY.png)
+
+![h:120](https://i.imgur.com/bBtZ3Zj.png)
+
+</div>
+
+<div>
+
+## Actor Model
+
+<br/>
+
+## WebAssembly
+
+<br/>
+
+## Persistent Memory
+
+</div>
+
+</div>
+
+<!--
+
+- ### Actor Model
+
+- ### Persistent Memory
+
+- ### WebAssembly
+
+-->
+
+</div>
+
 </div>
 
 <!-- 近期将上线 Vara Network 主网 -->
 
 ---
 
+# Actor Model - Message
+
 ![bg](./assets/Ambient.png)
 
-# Gear 智能合约基本特性
+<div align="center">
 
-  - **Rust / WebAssembly**
-  - **Actor Model** / **Asynchronous Messaging**
-  - **Persistent Memory**
+![h:550](https://i.imgur.com/9tUxBwx.png)
+
+<div/>
+
 
 ---
 
-![bg](./assets/Ambient.png)
-
-# 开发环境搭建
-
-```
-$ rustup default nightly
-$ rustup target add wasm32-unknown-unknown
-```
-
-或 `./rust-toolchain`
-
-```
-[toolchain]
-channel = "nightly"
-components = [ "rustfmt", "clippy" ]
-targets = [ "wasm32-unknown-unknown" ]
-profile = "minimal"
-```
----
+# Actor Model - Program
 
 ![bg](./assets/Ambient.png)
 
-# Flipper Contract
+<div align="center">
 
-初始状态: 🌚
-flip => 🌝
-flip => 🌚
-flip => 🌝
-flip => 🌚
-...
+![h:550](https://i.imgur.com/2egiONF.png)
+
+<div/>
+
 
 ---
 
+# Program Anatomy
+
 ![bg](./assets/Ambient.png)
 
-# Flipper Contract: 初始化项目
+<div align="center">
 
-## `cargo init ...`
+![h:550](https://i.imgur.com/w1PZqWo.png)
 
-```
-$ cargo init --lib gear-flipper
-```
-
-## `Cargo.toml`
-
-```
-...
-[dependencies]
-gstd = { git = "https://github.com/gear-tech/gear.git", branch = "stable" }
-scale-info = { version = "2", default-features = false, features = ["derive"] }
-parity-scale-codec = { version = "3", default-features = false, features = ["derive"] }
-
-[build-dependencies]
-gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git", branch = "stable" }
-
-[dev-dependencies]
-gtest = { git = "https://github.com/gear-tech/gear.git", branch = "stable" }
-```
+<div/>
 
 ---
 
+# Example Gear WASM Module
+
 ![bg](./assets/Ambient.png)
 
-# Flipper Contract: 配置 WebAssembly Builder
-
-## `./build.rs`
-
 ```
-fn main() {
-    gear_wasm_builder::build();
-}
+(module
+    (import "env" "gr_reply_to"  (func $gr_reply_to (param i32)))
+    (import "env" "memory" (memory 2))
+    (export "handle" (func $handle))
+    (export "init" (func $init))
+    (func $handle
+        i32.const 65536
+        call $gr_reply_to
+    )
+    (func $init)
+)
 ```
+
+https://docs.gear.rs/gstd/index.html
 
 ---
 
+# Message Dispatching
+
 ![bg](./assets/Ambient.png)
 
-# Flipper Contract: 目录结构
+<div align="center">
 
-```
-.
-├── build.rs
-├── Cargo.toml
-├── rust-toolchain
-└── src
-    ├── io.rs
-    ├── lib.rs
-    └── tests.rs
-```
+![h:550](https://i.imgur.com/ZleLcL1.png)
+
+<div/>
 
 ---
 
-# Flipper Contract: 消息定义
+# Common Patterns
+
 
 ![bg](./assets/Ambient.png)
 
-`./src/io.rs`
+- Command pattern
+
+<!--
+The Command pattern encapsulates a request as an object, allowing the request to be parameterized, queued, or logged. In Substrate, the dispatchable functions of a pallet serve as commands. The dispatchable functions are defined within the Call enum of a pallet, and each variant represents a specific command that can be executed.
+-->
+
+- Dispatcher pattern
+
+<!--
+The Dispatcher pattern is used to decouple various components of a system and provide a centralized mechanism for handling requests. In Substrate, the Executive module acts as the dispatcher, managing the execution of different runtime functions by delegating the calls to the appropriate pallets.
+-->
 
 ```
-use parity_scale_codec::{Decode, Encode};
-use scale_info::TypeInfo;
+//! my_pallet/src/lib.rs
 
-#[derive(Debug, Decode, Encode, TypeInfo)]
-pub enum FlipperAction {
-    Flip,
-}
+  // calling transfer_keep_alive() from my pallet
+  let call = pallet_balances::Call::<T>::transfer_keep_alive {
+    dest,
+    amount,
+  };
+  let _ = call.dispatch(origin);
 
-#[derive(Debug, Decode, Encode, TypeInfo)]
-pub enum FlipperEvent {
-    FlippedTo(u8),
-}
 ```
 
 ---
 
-# Flipper Contract: 元数据
-
-
-![bg](./assets/Ambient.png)
-
-```
-use gstd::prelude::*;
-
-gstd::metadata! {
-  title: "flipper",
-  handle:
-    input: FlipperAction,
-    output: FlipperEvent,
-}
-```
-
----
-
-# Flipper Contract: 合约状态
+# @gear-js/api
 
 ![bg](./assets/Ambient.png)
 
-```
-static mut FlipperState: bool = false;
-```
+<div align="center">
 
----
+![h:550](https://i.imgur.com/ksXVqE4.png)
 
-# Flipper Contract: 消息处理
-
-![bg](./assets/Ambient.png)
-
-```
-#[no_mangle]
-unsafe extern "C" fn handle() {
-    let action: FlipperAction = gstd::msg::load().expect("failed to load input message");
-    match action {
-        FlipperAction::Flip => {
-            FlipperState = !FlipperState;
-            let event = FlipperEvent::FlippedTo(FlipperState as u8);
-            gstd::msg::reply(event, 0).expect("failed to send response");
-        },
-    }
-}
-```
-
----
-
-# Flipper Contract: 单元测试
-
-![bg](./assets/Ambient.png)
-
-```
-use gtest::{Program, System};
-
-#[test]
-fn it_works() {
-    let system = System::new();
-    system.init_logger();
-
-    let program = Program::current(&system);
-
-    program.send_bytes(0, "let's goooo!");
-
-    let res = program.send(42, FlipperAction::Flip);
-    assert_eq!(res.main_failed(), false);
-
-    ...
-}
-```
+<div/>
 
 ---
 
@@ -347,7 +297,7 @@ fn it_works() {
 
 # Follow Us
 
-<div class="columns">
+<div class="columns" align="center">
 
 <div>
 
@@ -364,3 +314,4 @@ fn it_works() {
 </div>
 
 ### 👉 https://wiki.gear-tech.io/docs/examples/prerequisites
+### 👉 https://academy.gear-tech.io/
