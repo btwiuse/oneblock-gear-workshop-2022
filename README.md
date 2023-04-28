@@ -48,7 +48,7 @@ size: 16:9
 
 <!-- _color: #FFF -->
 
-# Gear 智能合约技术纵览
+# 在 Vara 上开发链上 NFT 游戏
 
 <div class="columns">
 <div>
@@ -69,29 +69,43 @@ size: 16:9
 <br/>
 <br/>
 
-- **Gear Protocol**
-- **Actor Model**
-- **Program Anatomy**
-- **Message Dispatching**
-
-<!--
-  - **Rust / WebAssembly**
-  - **Actor Model** / **Asynchronous Messaging**
-  - **Persistent Memory**
-  - **上手示例: Flipper Contract**
--->
-
-
-<!--
-  - **消息类型**
-  - **内部状态**
-  - **消息处理**
-  - **元数据**
-  - **编写测试**
--->
+- **关于 Gear**
+- **Vara Network**
+- **Actor 模型简介**
+- **Workshop 大纲**
 
 </div>
 </div>
+
+---
+
+<!-- About the company -->
+
+![bg](https://i.imgur.com/Tp9YqQ6.png)
+
+---
+
+<!-- Nikolay Volf -->
+
+![bg](https://i.imgur.com/H20r5pN.jpg)
+
+---
+
+<!-- CBDO / CFO / CTO -->
+
+![bg](https://i.imgur.com/xo3YfJU.png)
+
+---
+
+<!-- Istanbul && California -->
+
+![bg](https://i.imgur.com/abbsaIe.jpg)
+
+---
+
+<!-- California && Mexico -->
+
+![bg](https://i.imgur.com/0Tntbgr.jpg)
 
 ---
 
@@ -204,83 +218,31 @@ Coming soon! ([source](https://github.com/paritytech/ss58-registry/blob/13019a7d
 
 ---
 
-# Program Anatomy
-
 ![bg](./assets/Ambient.png)
 
-<div align="center">
+# Workshop 大纲
 
-![h:550](https://i.imgur.com/w1PZqWo.png)
-
-<div/>
-
----
-
-# Example Gear WASM Module
-
-![bg](./assets/Ambient.png)
-
-```
-(module
-    (import "env" "gr_reply_to"  (func $gr_reply_to (param i32)))
-    (import "env" "memory" (memory 2))
-    (export "handle" (func $handle))
-    (export "init" (func $init))
-    (func $handle
-        i32.const 65536
-        call $gr_reply_to
-    )
-    (func $init)
-)
-```
-
-https://docs.gear.rs/gstd/index.html
-
----
-
-# Message Dispatching
-
-![bg](./assets/Ambient.png)
-
-<div align="center">
-
-![h:550](https://i.imgur.com/ZleLcL1.png)
-
-<div/>
-
----
-
-# @gear-js/api
-
-![bg](./assets/Ambient.png)
-
-<div align="center">
-
-![h:550](https://i.imgur.com/ksXVqE4.png)
-
-<div/>
+| 模块 | 描述 | 目标 |
+| :---: | :---: | :---: |
+| [./app](./app) | 模板合约 | 搭建开发环境 / 了解 Gear 合约项目的结构, 入口函数 / 使用 Gear IDEA 上部署合约 / 向合约发送消息 / 查询合约状态 |
+| [./tamagotchi](./tamagotchi) | 宠物 NFT 合约 | 了解合约代码逻辑 / 创建宠物 / 自定义宠物属性 |
+| [./battle](./battle) | 对战合约 | 了解对战游戏合约运行逻辑 |
+| [./frontend](./frontend) | 游戏前端&合约交互 | 在本地运行游戏前端 / 使用 gear-js 脚本读取合约状态 / 体验游戏 [![Play Button](https://img.icons8.com/material-rounded/24/000000/play--v1.png)](https://tamagotchi-battle.vercel.app) |
 
 ---
 
 ![bg](./assets/Ambient.png)
 
-# Follow Us
+# 准备工作
 
-<div class="columns" align="center">
+## 安装 Polkadot.js extension
 
-<div>
+https://polkadot.js.org/extension
 
-<img src="./assets/GearTwitter.jpg" width=300 height=300/>
+## 生成随机钱包地址
 
-</div>
+右上角 + => Create new account => 保存助记词 => 设置账户名称 / 密码
 
-<div>
+## 打开 GitPod 在线编辑器 (使用 GitHub 登录)
 
-<img src="./assets/GearWechat.jpg" width=300 height=300/>
-
-</div>
-
-</div>
-
-### 👉 https://wiki.gear-tech.io/docs/examples/prerequisites
-### 👉 https://academy.gear-tech.io/
+https://github.com/btwiuse/tamagotchi-battle
