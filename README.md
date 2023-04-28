@@ -245,4 +245,4 @@ https://polkadot.js.org/extension
 
 ## 打开 GitPod 在线编辑器 (使用 GitHub 登录)
 
-https://github.com/btwiuse/tamagotchi-battle
+https://github.com/GearFans/tamagotchi-battle
