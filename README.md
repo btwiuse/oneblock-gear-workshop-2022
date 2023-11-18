@@ -48,7 +48,7 @@ size: 16:9
 
 <!-- _color: #FFF -->
 
-# 在 Vara 上开发链上 NFT 游戏
+# 如何开始在 Vara 上构建 DApp
 
 <div class="columns">
 <div>
@@ -69,10 +69,12 @@ size: 16:9
 <br/>
 <br/>
 
-- **关于 Gear**
-- **Vara Network**
+- **Gear & Vara Network**
 - **Actor 模型简介**
-- **Workshop 大纲**
+- **Hello World 合约样例**
+- **Gear IDEA 部署与交互**
+- **Gear JS 前端库**
+- **Gear Wiki 与进阶课程**
 
 </div>
 </div>
