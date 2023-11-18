@@ -13,9 +13,23 @@ style: |
     top: -80px;
   }
   h1 {
-    border-left: 15px solid #6666FF;
+    border-left: 12px solid cyan;
     padding-left: 1rem;
-    color: #131819;
+    color: cyan;
+  }
+  h2 {
+    border-left: 0px solid gray;
+    padding-left: 1rem;
+    color: white;
+  }
+  p {
+    color: white;
+  }
+  li {
+    color: white;
+  }
+  ul {
+    color: white;
   }
   .columns {
     display: grid;
@@ -44,7 +58,7 @@ style: |
 size: 16:9
 ---
 
-![bg](./assets/BackgroundGearBlack.png)
+![bg](./assets/BackgroundGearOrange.png)
 
 <!-- _color: #FFF -->
 
@@ -69,52 +83,22 @@ size: 16:9
 <br/>
 <br/>
 
-- **Gear & Vara Network**
-- **Actor 模型简介**
+- **Gear Protocol 与 Vara Network**
+- **Actor 模型**
 - **Hello World 合约样例**
 - **Gear IDEA 部署与交互**
-- **Gear JS 前端库**
-- **Gear Wiki 与进阶课程**
+- **Gear JS 库**
+- **Gear Wiki & Gear Academy**
 
 </div>
 </div>
-
----
-
-<!-- About the company -->
-
-![bg](https://i.imgur.com/Tp9YqQ6.png)
-
----
-
-<!-- Nikolay Volf -->
-
-![bg](https://i.imgur.com/H20r5pN.jpg)
-
----
-
-<!-- CBDO / CFO / CTO -->
-
-![bg](https://i.imgur.com/xo3YfJU.png)
-
----
-
-<!-- Istanbul && California -->
-
-![bg](https://i.imgur.com/abbsaIe.jpg)
-
----
-
-<!-- California && Mexico -->
-
-![bg](https://i.imgur.com/0Tntbgr.jpg)
 
 ---
 
 <!-- ![bg](./assets/BackgroundGearWhite.png) -->
-![bg](./assets/Ambient.png)
+![bg](./assets/AmbientBlack.png)
 
-# Gear Protocol
+# Gear Protocol 与 Vara Network
 
 ## Smart Contract Platform built on Substrate
 
@@ -124,26 +108,7 @@ size: 16:9
 
 ![](https://i.imgur.com/ixxN8sf.png)
 
-<details><summary>Vara Standalone Network</summary>
-
-```
-...
-    {
-      "prefix": 137,
-      "network": "vara",
-      "displayName": "Vara Network",
-      "symbols": ["VARA"],
-      "decimals": [12],
-      "standardAccount": "*25519",
-      "website": "https://vara-network.io/"
-    },
-...
-```
-
-Coming soon! ([source](https://github.com/paritytech/ss58-registry/blob/13019a7d23901c499d97855ba6c2145962c42fd0/ss58-registry.json#L787-L795))
-
-</details>
-
+<p>Vara Standalone Network</p>
 
 </div>
 
@@ -194,46 +159,38 @@ Coming soon! ([source](https://github.com/paritytech/ss58-registry/blob/13019a7d
 
 ---
 
-# Actor Model - Message
+# Actor 模型
 
-![bg](./assets/Ambient.png)
+![bg](./assets/AmbientBlack.png)
 
 <div align="center">
 
-![h:550](https://i.imgur.com/9tUxBwx.png)
+![h:550](./assets/ActorModel.png)
 
 <div/>
 
 
 ---
 
-# Actor Model - Program
+# Hello World 合约
 
-![bg](./assets/Ambient.png)
+![bg](./assets/AmbientBlack.png)
 
 <div align="center">
 
-![h:550](https://i.imgur.com/2egiONF.png)
+![h:300](./assets/PingPong.png)
 
 <div/>
 
+[![Open in Gitpod](https://img.shields.io/badge/Open_in-Gitpod-white?logo=gitpod)](https://gitpod.io/#FOLDER=ping/https://github.com/gear-foundation/dapps)
+
+https://github.com/gear-foundation/dapps/tree/master/contracts/ping
+
 
 ---
 
-![bg](./assets/Ambient.png)
 
-# Workshop 大纲
-
-| 模块 | 描述 | 目标 |
-| :---: | :---: | :---: |
-| [./app](./app) | 模板合约 | 搭建开发环境 / 了解 Gear 合约项目的结构, 入口函数 / 使用 Gear IDEA 上部署合约 / 向合约发送消息 / 查询合约状态 |
-| [./tamagotchi](./tamagotchi) | 宠物 NFT 合约 | 了解合约代码逻辑 / 创建宠物 / 自定义宠物属性 |
-| [./battle](./battle) | 对战合约 | 了解对战游戏合约运行逻辑 |
-| [./frontend](./frontend) | 游戏前端&合约交互 | 在本地运行游戏前端 / 使用 gear-js 脚本读取合约状态 / 体验游戏 [![Play Button](https://img.icons8.com/material-rounded/24/000000/play--v1.png)](https://tamagotchi-battle.vercel.app) |
-
----
-
-![bg](./assets/Ambient.png)
+![bg](./assets/AmbientBlack.png)
 
 # 准备工作
 
@@ -245,6 +202,68 @@ https://polkadot.js.org/extension
 
 右上角 + => Create new account => 保存助记词 => 设置账户名称 / 密码
 
-## 打开 GitPod 在线编辑器 (使用 GitHub 登录)
+## 打开 Gear IDEA 并切换到 Vara Testnet
 
-https://github.com/GearFans/tamagotchi-battle
+https://idea.gear-tech.io
+
+---
+
+
+![bg](./assets/AmbientBlack.png)
+
+# Gear IDEA 部署与交互
+
+<div align="center">
+
+![h:500](./assets/GearIDEA.png)
+
+<div/>
+
+https://idea.gear-tech.io/programs?node=wss%3A%2F%2Ftestnet.vara-network.io
+
+---
+
+![bg](./assets/AmbientBlack.png)
+
+# Gear JS 库
+
+The Gear-JS API provides a set of utilities, libraries and tools that enable JavaScript applications to interact with smart contracts running in the Gear-based networks via queries to a Gear node.
+
+- NPM: `@gear-js/api`
+- Docs：https://github.com/gear-tech/gear-js/tree/main/api
+- Playground: https://gear.sh
+
+---
+
+
+![bg](./assets/AmbientBlack.png)
+
+# Gear Wiki
+
+Gear Documentation Portal: The place to start developing with Gear
+
+
+<div align="center">
+
+![h:400](./assets/GearWiki.png)
+
+<div/>
+
+https://wiki.gear-tech.io/docs/getting-started-in-5-minutes
+
+---
+
+
+![bg](./assets/AmbientBlack.png)
+
+# Gear Academy
+
+Gear Academy: learn fundamental blockchain development concepts, build smart contracts and explore Gear's robust features.
+
+<div align="center">
+
+![h:400](./assets/GearAcademy.png)
+
+<div/>
+
+https://academy.gear.rs
