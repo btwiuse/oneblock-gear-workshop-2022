@@ -62,7 +62,9 @@ size: 16:9
 
 <!-- _color: #FFF -->
 
-# 如何开始在 Vara 上构建 DApp
+# Gear 合约的 Actor 模型
+
+## Init, Handle 和 State 入口函数介绍
 
 <div class="columns">
 <div>
@@ -85,10 +87,9 @@ size: 16:9
 
 - **Gear Protocol 与 Vara Network**
 - **Actor 模型**
-- **Hello World 合约样例**
-- **Gear IDEA 部署与交互**
-- **Gear JS 库**
-- **Gear Wiki & Gear Academy**
+- **Init: 状态初始化**
+- **Handle：状态更新**
+- **State：状态查询**
 
 </div>
 </div>
@@ -141,21 +142,9 @@ size: 16:9
 
 </div>
 
-<!--
-
-- ### Actor Model
-
-- ### Persistent Memory
-
-- ### WebAssembly
-
--->
-
 </div>
 
 </div>
-
-<!-- 近期将上线 Vara Network 主网 -->
 
 ---
 
@@ -225,19 +214,6 @@ https://idea.gear-tech.io/programs?node=wss%3A%2F%2Ftestnet.vara-network.io
 
 ![bg](./assets/AmbientBlack.png)
 
-# Gear JS 库
-
-The Gear-JS API provides a set of utilities, libraries and tools that enable JavaScript applications to interact with smart contracts running in the Gear-based networks via queries to a Gear node.
-
-- NPM: `@gear-js/api`
-- Docs：https://github.com/gear-tech/gear-js/tree/main/api
-- Playground: https://gear.sh
-
----
-
-
-![bg](./assets/AmbientBlack.png)
-
 # Gear Wiki
 
 Gear Documentation Portal: The place to start developing with Gear
@@ -250,20 +226,3 @@ Gear Documentation Portal: The place to start developing with Gear
 <div/>
 
 https://wiki.gear-tech.io/docs/getting-started-in-5-minutes
-
----
-
-
-![bg](./assets/AmbientBlack.png)
-
-# Gear Academy
-
-Gear Academy: learn fundamental blockchain development concepts, build smart contracts and explore Gear's robust features.
-
-<div align="center">
-
-![h:400](./assets/GearAcademy.png)
-
-<div/>
-
-https://academy.gear.rs
