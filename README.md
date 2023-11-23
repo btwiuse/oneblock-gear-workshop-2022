@@ -173,39 +173,25 @@ flip => 🌚
 
 ---
 
-# Hello World 合约
 
 ![bg](./assets/AmbientBlack.png)
 
-<div align="center">
-
-![h:300](./assets/PingPong.png)
-
-<div/>
-
-[![Open in Gitpod](https://img.shields.io/badge/Open_in-Gitpod-white?logo=gitpod)](https://gitpod.io/#FOLDER=ping/https://github.com/gear-foundation/dapps)
-
-https://github.com/gear-foundation/dapps/tree/master/contracts/ping
-
+# Init: 状态初始化
 
 ---
 
 
 ![bg](./assets/AmbientBlack.png)
 
-# 准备工作
+# Handle：状态更新
 
-## 安装 Polkadot.js extension
+---
 
-https://polkadot.js.org/extension
 
-## 生成随机钱包地址
+![bg](./assets/AmbientBlack.png)
 
-右上角 + => Create new account => 保存助记词 => 设置账户名称 / 密码
+# State：状态查询
 
-## 打开 Gear IDEA 并切换到 Vara Testnet
-
-https://idea.gear-tech.io
 
 ---
 
@@ -226,15 +212,22 @@ https://idea.gear-tech.io/programs?node=wss%3A%2F%2Ftestnet.vara-network.io
 
 ![bg](./assets/AmbientBlack.png)
 
-# Gear Wiki
+# Follow Us
 
-Gear Documentation Portal: The place to start developing with Gear
+<div class="columns">
 
+<div>
 
-<div align="center">
+<img src="./assets/GearTwitter.jpg" width=300 height=300/>
 
-![h:400](./assets/GearWiki.png)
+</div>
 
-<div/>
+<div>
 
-https://wiki.gear-tech.io/docs/getting-started-in-5-minutes
+<img src="./assets/GearWechat.jpg" width=300 height=300/>
+
+</div>
+
+</div>
+
+### 👉 https://wiki.gear-tech.io/docs/examples/prerequisites
